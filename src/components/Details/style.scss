@@ -1,0 +1,146 @@
+.info-panel {
+  .more-info-panel {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50vh; 
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(10px);
+    transition: transform 0.5s ease-in-out, opacity 0.3s ease-in-out; 
+    transform: translateY(100%); 
+    opacity: 0; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+  }
+    
+ 
+  }
+
+  .info-content {
+   
+    width: 80%;
+    height: 80%;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+
+    div {
+      width: 50%;
+    }
+
+    .data-cards {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    .label {
+      font-family: Inter;
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 28px;
+      letter-spacing: 3px;
+      vertical-align: bottom;
+      text-transform: uppercase;
+    }
+
+    .value {
+      font-family: Inter;
+      font-weight: 700;
+      font-size: 56px;
+      line-height: 100%;
+      letter-spacing: 0;
+      vertical-align: bottom;
+      margin: 0;
+    }
+
+    .separator::before {
+      content: "";
+      height: 100%;
+      width: 2px;
+      position: absolute;
+      background-color: #303030;
+      left: 47%;
+      filter: opacity(0.3);
+    }
+  }
+
+
+@media (max-width: 768px) {
+  .info-panel {
+    height: 60%;
+
+    .info-content {
+      width: 90%;
+      height: 90%;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+
+      div {
+        width: 100%;
+      }
+
+      .separator::before {
+        left: 0;
+        display: none;
+      }
+
+      .data-cards {
+        flex-direction: row;
+        gap: 20px;
+      }
+
+      .label {
+        font-size: 14px;
+        line-height: 24px;
+        letter-spacing: 2px;
+      }
+
+      .value {
+        font-size: 42px;
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .info-panel {
+    height: 70%;
+
+    .info-content {
+      width: 95%;
+      height: 95%;
+      flex-direction: column;
+      gap: 15px;
+      align-items: center;
+      justify-content: center;
+
+      div {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .data-cards {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      .label {
+        font-size: 12px;
+        line-height: 20px;
+        letter-spacing: 1.5px;
+      }
+
+      .value {
+        font-size: 32px;
+      }
+    }
+  }
+}
